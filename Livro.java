@@ -11,7 +11,6 @@ public class Livro {
         this.disponivel = true;
     }
 
-    // Getters e setters
     public String getTitulo() {
         return titulo;
     }
