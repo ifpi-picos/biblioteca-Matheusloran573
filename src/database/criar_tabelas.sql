@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS livros (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    emprestado BOOLEAN DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS emprestimos (
+    id SERIAL PRIMARY KEY,
+    usuario_id INTEGER NOT NULL,
+    livro_id INTEGER NOT NULL,
+    data_emprestimo TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    FOREIGN KEY (livro_id) REFERENCES livros(id) ON DELETE CASCADE
+);
