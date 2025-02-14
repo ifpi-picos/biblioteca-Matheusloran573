@@ -1,4 +1,4 @@
-# 📚 *Biblioteca *  
+# 📚 Biblioteca   
 
 Este é um sistema desenvolvido em **Java** utilizando **MySQL** para gerenciar uma biblioteca, permitindo o cadastro, consulta e gerenciamento de livros e usuários.  
 
